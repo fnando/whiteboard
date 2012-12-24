@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style type="text/css" media="screen">
+      canvas {
+        display: block;
+        cursor: crosshair;
+      }
+
+      body {
+        background: #ccc;
+        padding: 50px;
+      }
+
+      span {
+        border: 3px solid #ccc;
+        float: left;
+        display: block;
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      .toolbar {
+        overflow: hidden;
+        padding-bottom: 20px;
+      }
+
+      .active {
+        border-color: #3263FF;
+      }
+
+      .button {
+        background: #aaa;
+        border-radius: 3px;
+        line-height: 25px;
+        text-align: center;
+        line-height: 25px;
+        font-family: sans-serif;
+        padding: 0 10px;
+        width: auto;
+        clear: right;
+        color: #eee;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="toolbar">
+      <span class="active color" data-color="#D00000" data-width="2"></span>
+      <span class="color" data-color="#ffffff" data-width="2"></span>
+      <span class="color" data-color="#ffdd00" data-width="2"></span>
+      <span class="color" data-color="#888888" data-width="2"></span>
+      <span class="color" data-color="#000000" data-width="20"></span>
+      <span class="button reset">reset</span>
+      <span class="button save">save image</span>
+    </div>
+
+    <div id="whiteboard"></div>
+    <script type="text/javascript" src="/jquery.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="/whiteboard.js"></script>
+    <script type="text/javascript" src="/app.js"></script>
+  </body>
+</html>
