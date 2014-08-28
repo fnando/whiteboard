@@ -1,13 +1,17 @@
 var http = require("http")
   , express = require("express")
+  , bodyParser = require("body-parser")
   , app = express()
   , server = http.createServer(app)
   , io = require("socket.io").listen(server)
-  , SERVER_PORT = process.env["PORT"] || 5678
+  , SERVER_PORT = process.env["PORT"] || 3000
 ;
 
 app.use(express.static(__dirname + "/public"));
-app.use(express.bodyParser());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(bodyParser.json())
 
 // Start the server on the provided `SERVER_PORT`.
 server.listen(parseInt(SERVER_PORT));
