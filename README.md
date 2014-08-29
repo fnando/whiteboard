@@ -10,7 +10,7 @@ Here's the demo of it: <http://www.youtube.com/watch?v=ebblHGaPgrI>
 
 1. Make sure you have [Node.js](http://nodejs.org) installed.
 2. Go to the directory and run `npm install`. Then, run `node server`.
-3. Open the <http://localhost:5678/> address in two different tabs.
+3. Open the <http://localhost:3000/> address in two different tabs.
 4. Play with it!
 
 ## License
